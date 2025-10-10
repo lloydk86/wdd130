@@ -1,0 +1,138 @@
+/* General Layout */
+#content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  background-color: #fcfbfb;
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header and Navigation */
+header {
+  background-color: rgba(20, 30, 13, 0.7);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  text-align: center;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+nav a:hover {
+  background-color: #1a1a1a;
+  color: #d9c2a3;
+  text-decoration: none;
+}
+
+/* Hero Section */
+#hero-img {
+  width: 100%;
+  height: auto;
+}
+
+#hero-msg h1,
+#hero-msg h4 {
+  text-align: center;
+}
+
+.home-title {
+  color: #2c3e50;
+}
+
+h4 {
+  color: #3e5f4b;
+}
+
+.button-box {
+  text-align: center;
+}
+
+.book,
+.join {
+  background-color: #e67e22;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.book:hover,
+.join:hover {
+  background-color: #d35400;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Card Icons and Logo */
+.logo {
+  width: 80px;
+}
+
+.icon {
+  width: 80px;
+}
+
+main section {
+  text-align: center;
+}
+
+/* Background Container */
+#background {
+  height: 725px;
+  background-color: #d5eaf2;
+}
+
+/* Message Section */
+.msg {
+  background-color: #ffffff;
+  color: #2c3e50;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.msg h2 {
+  color: #2c3e50;
+}
+
+.msg p {
+  color: #3e3e3e;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.2em;
+  color: #ffffff;
+}
+
+footer a {
+  color: #d9c2a3;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}

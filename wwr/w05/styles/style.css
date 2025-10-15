@@ -211,3 +211,36 @@ footer p a:hover {
 footer .social img {
   padding-top: 15px;
 }
+
+.version-links {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.version-links h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.version-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.version-links li {
+  margin: 0.5rem 0;
+}
+
+.version-links a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.version-links a:hover {
+  text-decoration: underline;
+}

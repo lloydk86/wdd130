@@ -21,6 +21,7 @@ header {
   background-color: rgba(20, 30, 13, 0.7);
   color: white;
   padding: 20px 40px;
+  padding-bottom: 20px;
   align-items: center;
 }
 
@@ -30,7 +31,7 @@ header {
 }
 
 .logo {
-  max-height: 60px;
+  max-height: 90px;
 }
 
 nav {
@@ -80,7 +81,9 @@ nav a:hover {
 .home-title {
   font-family: 'Rock Salt', cursive;
   font-size: 2.5rem;
-  color: white;
+  color: #d9c2a3;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 
 #hero-msg h4 {
@@ -91,20 +94,27 @@ nav a:hover {
 .button-box {
   margin-top: 1rem;
 }
-
-.book, .join {
+  .book,
+.join {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #e67e22;
-  color: white;
+  background-color: #d9c2a3;
+  color: #272626;
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.book:hover, .join:hover {
-  background-color: #d35400;
+.book:hover,
+.join:hover {
+  background-color: #aabd8c; /* Accent green from your palette */
+  color: #2c3e50;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
 }
+
 
 /* ========== MAIN GRID ========== */
 .home-grid {
@@ -127,6 +137,32 @@ nav a:hover {
 .rapids-card {
   grid-column: 8 / 10;
   grid-row: 2 / 3;
+}
+.icon {
+  display: block;
+  margin: 0 auto;
+  padding-top: 10px;
+  width: auto; 
+  height: auto;
+}
+
+.rivers-card,
+.camping-card,
+.rapids-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rivers-card h2,
+.camping-card h2,
+.rapids-card h2 {
+  font-size: 1.4rem; /* Slightly smaller than default */
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2c3e50; /* Matches your body text tone */
 }
 
 #background {
@@ -159,7 +195,9 @@ nav a:hover {
 }
 
 .msg h2 {
-  font-family: 'Rock Salt', cursive;
+  font-family: 'Roboto', cursive;
+  font-size: 27px;
+  padding-bottom: 18px;
 }
 
 .msg p {
@@ -195,12 +233,12 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  color: #d9c2a3;
   text-align: center;
 }
 
 footer a {
-  color: white;
+  color: #d9c2a3;
   text-decoration: none;
   font-weight: bold;
 }
@@ -210,9 +248,9 @@ footer a:hover {
 }
 
 .social img {
-  width: 30px;
+  width: 80px;
   margin: 0 10px;
-  padding-top: 15px;
+  padding-top: 20px;
 }
 
 /* ========== RESPONSIVE DESIGN ========== */
@@ -252,8 +290,9 @@ footer a:hover {
   }
 
   .rivers-card, .camping-card, .rapids-card {
-    margin: 50px auto;
-    width: 60%;
+    margin: 0 auto;
+  text-align: center;
+  width: 60%; 
   }
 
   #background {

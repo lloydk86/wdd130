@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora&display=swap');
+
+:root {
+  --primary-color: #396E94;
+  --secondary-color: #E7C24F;
+  --accent1-color: #A43312;
+  --accent2-color: #FFFFFF;
+  --accent3-color: #381D2A;
+  --accent4-color: #AABD8C;
+
+  --heading-font: "DM Serif Display", serif;
+  --paragraph-font: "Lora", serif;
+
+  --nav-link-color: #396E94;
+  --nav-background-color: #E7C24F;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #396E94;
+}
+
+/* -------------------- Body -------------------- */
+body {
+  font-family: var(--paragraph-font);
+  background-color: var(--accent2-color);
+  color: var(--accent3-color);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* -------------------- Header -------------------- */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1em 0;
+}
+
+header h1 {
+  font-family: var(--heading-font);
+  margin: 0.2em 0;
+  font-size: 2.5em;
+}
+
+header h2 {
+  font-family: var(--paragraph-font);
+  margin: 0.2em 0;
+  font-size: 1.2em;
+}
+
+/* -------------------- Horizontal Rules -------------------- */
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background-color: var(--accent1-color);
+  border: none;
+}
+
+/* -------------------- Headings -------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/* -------------------- Paragraphs -------------------- */
+p {
+  font-family: var(--paragraph-font);
+  color: var(--accent3-color);
+  margin-bottom: 1em;
+}
+
+p.colored {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1em;
+  border-radius: 5px;
+  display: inline-block;
+  max-width: 90%;
+}
+
+/* -------------------- Images -------------------- */
+img {
+  display: inline-block;
+  margin: 10px;
+  border-radius: 10px;
+  max-width: 90%;
+  height: auto;
+}
+
+/* -------------------- Color Palette Table -------------------- */
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 20px auto;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.colors th {
+  background-color: #999;
+  color: white;
+  padding: 0.5em;
+}
+
+.colors td {
+  width: 16%;
+  height: 3em;
+  font-weight: bold;
+}
+
+.primary { background-color: var(--primary-color); color: white; }
+.secondary { background-color: var(--secondary-color); }
+.accent1 { background-color: var(--accent1-color); color: white; }
+.accent2 { background-color: var(--accent2-color); }
+.accent3 { background-color: var(--accent3-color); color: white; }
+.accent4 { background-color: var(--accent4-color); }
+
+/* -------------------- Navigation -------------------- */
+nav {
+  background-color: var(--nav-background-color);
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+/* -------------------- Sitemap -------------------- */
+.sitemap {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas:
+    ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.sitemap > div {
+  text-align: center;
+  font-family: var(--paragraph-font);
+}
+
+.sm-home, .sm-page2, .sm-page3 {
+  background-color: var(--secondary-color);
+  line-height: 3em;
+  border-radius: 8px;
+  color: var(--accent3-color);
+  font-weight: bold;
+}
+
+.sm-home { grid-area: home; }
+.sm-page2 { grid-area: page2; }
+.sm-page3 { grid-area: page3; }
+
+.top { grid-area: top; border-left: 2px solid var(--primary-color); }
+.left { grid-area: left; border-top: 2px solid var(--primary-color); border-left: 2px solid var(--primary-color); }
+.right { grid-area: right; border-top: 2px solid var(--primary-color); border-right: 2px solid var(--primary-color); }
+
+/* -------------------- Footer -------------------- */
+footer {
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: var(--accent3-color);
+  border-top: 2px solid var(--primary-color);
+  padding-top: 10px;
+}

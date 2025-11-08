@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preservation Methods</title>
+  <link rel="stylesheet" href="styles/methods.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="methods.html">Methods</a>
+      <a href="getinvolved.html">Get Involved</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Preservation Methods</h1>
+      <!-- Hero image -->
+      <img src="images/preserved_foods.jpeg" alt="Various preserved foods" class="hero-image">
+    </section>
+
+    <section class="methods-grid">
+      <div class="method">  
+        <h3>Fermentation</h3>
+        <img src="images/fermented_vegetables.jpg" alt="Fermented vegetables in jars" class="method-image">
+        <p>Fermentation uses beneficial bacteria to preserve foods such as vegetables, dairy, and grains. It enhances flavor, nutrition, and shelf life naturally.</p>
+      </div>
+
+      <div class="method">
+        <h3>Drying</h3>
+        <img src="images/dried_fruits.jpg" alt="Dried fruits and herbs" class="method-image">
+        <p>Drying removes moisture from food to prevent spoilage. It’s one of the oldest preservation techniques, suitable for fruits, herbs, and meats.</p>
+      </div>
+
+      <div class="method">
+        <h3>Canning</h3>
+        <img src="images/fruit_canning.jpg" alt="Canned fruits and vegetables" class="method-image">
+        <p>Canning seals food in airtight containers using heat. It helps preserve fruits, vegetables, and sauces for long-term storage.</p>
+      </div>
+    </section>
+
+
+     <!-- Safety Guidelines Button -->
+    <section class="safety-guidelines">
+      <button class="safety-button" id="safetyBtn">Top 5 Safety Guidelines</button>
+
+      <!-- Hidden Guidelines -->
+      <ol id="safetyList" style="display: none; margin-top: 1em; text-align: left;">
+        <li>Always sterilize jars and equipment before use.</li>
+        <li>Use tested recipes to ensure proper acidity and preservation.</li>
+        <li>Label all preserved foods with date and contents.</li>
+        <li>Store preserved foods in a cool, dark place to maintain quality.</li>
+        <li>Check jars for leaks or spoilage before consumption.</li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- JS for Safety Button -->
+  <script>
+    const safetyBtn = document.getElementById('safetyBtn');
+    const safetyList = document.getElementById('safetyList');
+
+    safetyBtn.addEventListener('click', () => {
+      if (safetyList.style.display === 'none') {
+        safetyList.style.display = 'block';
+        safetyBtn.textContent = 'Hide Safety Guidelines';
+      } else {
+        safetyList.style.display = 'none';
+        safetyBtn.textContent = 'Top 5 Safety Guidelines';
+      }
+    });
+  </script>
+</body>
+</html>
+  </main>
+</body>
+</html>
+

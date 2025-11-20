@@ -1,173 +1,163 @@
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora&display=swap');
 
-:root {
-  --primary-color: #396E94;
-  --secondary-color: #E7C24F;
-  --accent1-color: #A43312;
-  --accent2-color: #FFFFFF;
-  --accent3-color: #381D2A;
-  --accent4-color: #AABD8C;
-
-  --heading-font: "DM Serif Display", serif;
-  --paragraph-font: "Lora", serif;
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ----- General ----- */
 body {
-  font-family: var(--paragraph-font);
-  background-color: var(--accent2-color);
-  color: var(--accent3-color);
-  text-align: center;
-  margin: 0 auto;
-  padding: 2em;
-  max-width: 1200px;
-  line-height: 1.6;
+  font-family: 'Lora', serif;
+  line-height: 1.8;
+  color: #381D2A; /* Dark plum */
+  background-color: #FCFBFB;
 }
 
-h1, h2, h3 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-/* ----- Header / Navigation ----- */
-nav {
-  background-color: var(--secondary-color);
+/* Header / Navbar */
+.navbar {
   display: flex;
-  justify-content: space-between;   /* logo left, links right */
+  justify-content: space-between;
   align-items: center;
-  padding: 0 1.5em;
-  border-radius: 10px;
-  height: 80px;
-}
-
-/* Logo space */
-.logo {
-  display: flex;
-  align-items: center;
-  height: 100%;
+  padding: 1.5rem 3rem;
+  background: #396E94; /* Deep Blue */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 4px solid #E7C24F; /* Gold accent */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 .logo img {
-  max-height: 70px;
-  width: auto;
-  object-fit: contain;
+  height: 85px; /* larger logo */
+  transition: transform 0.3s ease;
 }
 
-/* Nav links */
-.nav-links {
-  display: flex;
-  gap: 2em;
+.logo img:hover {
+  transform: scale(1.05);
 }
 
 .nav-links a {
+  margin-left: 2.5rem;
   text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-  border: 2px solid var(--primary-color);
-  border-radius: 8px;
-  padding: 0.5em 1.5em;
-  transition: 0.3s;
+  color: #FCFBFB;
+  font-weight: 600;
+  font-family: 'Lora', serif;
+  font-size: 1.3rem; /* larger nav text */
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
+  color: #E7C24F;
+  text-decoration: underline;
 }
 
-/* ----- Hero Section ----- */
+/* Hero Section */
 .hero {
-  margin-top: 2em;
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(to right, rgba(57,110,148,0.85), rgba(168,189,140,0.85)), 
+              url('images/communities-canning-food.jpg') center/cover no-repeat;
+  color: #FCFBFB;
 }
 
 .hero h1 {
-  font-size: 2.5em;
-  border: 2px solid var(--primary-color);
-  padding: 0.4em 0;
-  margin-bottom: 1em;
+  font-family: 'DM Serif Display', serif;
+  font-size: 3.4rem; /* slightly larger heading */
+  margin-bottom: 1rem;
 }
 
-.image-banner {
-  width: 100%;
-  height: 120px;
-  background-color: var(--accent4-color);
-  border: 3px dashed var(--accent3-color);
-  margin: 1em 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-style: italic;
+.hero-image {
+  display: none; /* background image replaces inline hero image */
 }
 
 .tagline {
-  font-size: 1.1em;
-  color: var(--accent1-color);
-  font-style: italic;
-  margin-bottom: 1.5em;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #E7C24F;
+  margin-bottom: 1.5rem;
+  font-family: 'Lora', serif;
 }
 
-/* ----- Section Content ----- */
+/* Section Styling */
+section {
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
 .section-title {
-  font-size: 1.8em;
-  margin-top: 2.5em;
-  border-bottom: 3px solid var(--secondary-color);
-  display: inline-block;
-  padding-bottom: 0.3em;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.4rem; /* larger section headings */
+  color: #396E94;
+  margin-bottom: 1rem;
+  border-left: 5px solid #A43312;
+  padding-left: 0.75rem;
 }
 
-/* ----- Buttons ----- */
+.section-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Call to Action */
+.cta {
+  text-align: center;
+  margin: 6rem 0;
+}
+
 .explore-button {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  background: #E7C24F;
+  color: #381D2A;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem; /* larger button text */
   font-weight: bold;
-  padding: 0.8em 1.8em;
-  border-radius: 8px;
-  margin-top: 1.5em;
-  transition: 0.3s;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: 'Lora', serif;
 }
 
 .explore-button:hover {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
+  background: #A43312;
+  color: #FCFBFB;
+  transform: translateY(-2px);
 }
 
-/* ----- Footer ----- */
+/* Footer */
 footer {
+  background: #396E94;
+  color: #FCFBFB;
   text-align: center;
-  padding: 1em;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-size: 0.9em;
-  border-radius: 10px;
-  margin-top: 3em;
+  padding: 3rem; /* more padding for visibility */
+  font-size: 1.3rem; /* larger footer text */
+  font-family: 'Lora', serif;
+  border-top: 4px solid #A43312;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
 }
 
-/* ----- Responsive Layout ----- */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    height: auto;
-    gap: 1em;
-    padding: 1em;
-  }
+footer p {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
 
-  .logo {
-    margin-bottom: 0.5em;
-    justify-content: center; /* center logo on mobile */
-  }
 
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    gap: 1em;
-  }
+/* Image Hover Effects */
+.hero-image,
+.section-image,
+.logo img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
 
-  .nav-links a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .image-banner {
-    height: 100px;
-  }
+.hero-image:hover,
+.section-image:hover,
+.logo img:hover {
+  transform: scale(1.05); /* slight zoom */
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25); /* deeper shadow */
 }

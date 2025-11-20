@@ -1,205 +1,229 @@
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora&display=swap');
 
-:root {
-  --primary-color: #396E94;
-  --secondary-color: #E7C24F;
-  --accent1-color: #A43312;
-  --accent2-color: #FFFFFF;
-  --accent3-color: #381D2A;
-  --accent4-color: #AABD8C;
-
-  --heading-font: "DM Serif Display", serif;
-  --paragraph-font: "Lora", serif;
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* ----- General ----- */
 body {
-  font-family: var(--paragraph-font);
-  background-color: var(--accent2-color);
-  color: var(--accent3-color);
-  text-align: center;
-  margin: 0 auto;
-  padding: 2em;
-  max-width: 1200px;
-  line-height: 1.6;
+  font-family: 'Lora', serif;
+  line-height: 1.8;
+  color: #381D2A; /* Dark plum */
+  background-color: #FCFBFB;
 }
 
-h1, h2, h3 {
-  font-family: var(--heading-font);
-  color: var(--primary-color);
-}
-
-/* ----- Navigation Header ----- */
-nav {
+/* Header / Navbar (same as Home) */
+.navbar {
   display: flex;
-  justify-content: center;   /* centered links */
+  justify-content: space-between;
   align-items: center;
-  background-color: var(--secondary-color);
-  padding: 0 1em;
-  height: 80px;
-  border-radius: 10px;
-  overflow: hidden;
+  padding: 1.5rem 3rem;
+  background: #396E94; /* Deep Blue */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 4px solid #E7C24F; /* Gold accent */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-nav a {
+.logo img {
+  height: 85px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.nav-links a {
+  margin-left: 2.5rem;
   text-decoration: none;
-  color: var(--primary-color);
-  font-weight: bold;
-  border: 2px solid var(--primary-color);
-  border-radius: 8px;
-  padding: 0.3em 1em;
-  margin-left: 1em;
-  transition: 0.3s;
+  color: #FCFBFB;
+  font-weight: 600;
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
+.nav-links a:hover {
+  color: #E7C24F;
+  text-decoration: underline;
 }
 
-/* ----- Hero Section ----- */
+/* Hero Section */
 .hero {
-  margin-top: 2em;
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(to right, rgba(57,110,148,0.85), rgba(168,189,140,0.85)), 
+              url('images/community_preservation.jpeg') center/cover no-repeat;
+  color: #FCFBFB;
 }
 
 .hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.4em;
-  border: 2px solid var(--primary-color);
-  padding: 0.3em 0;
+  font-family: 'DM Serif Display', serif;
+  font-size: 3.4rem;
+  margin-bottom: 1rem;
 }
 
 .hero-image {
-  max-width: 100%;
-  height: auto;
-  margin: 1em 0;
-  border: 3px dashed var(--accent3-color);
+  display: none; /* background image replaces inline hero image */
 }
 
 .hero p {
-  font-size: 1.1em;
-  color: var(--accent1-color);
-  font-style: italic;
-  margin-bottom: 1.5em;
+  max-width: 800px;
+  margin: 1.5rem auto;
+  font-size: 1.2rem;
 }
 
-/* ----- Section Titles ----- */
+/* Involve Sections */
+.involve-section {
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+}
+
 .involve-section h2 {
-  font-size: 1.8em;
-  margin-top: 2.5em;
-  border-bottom: 3px solid var(--secondary-color);
-  display: inline-block;
-  padding-bottom: 0.3em;
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.4rem;
+  color: #396E94;
+  margin-bottom: 2rem;
+  border-left: 5px solid #A43312;
+  padding-left: 0.75rem;
 }
 
-/* ----- Grid Layouts ----- */
+/* Grid Layout */
 .involve-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2em;
-  margin-top: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
 }
 
 .involve-card {
-  background-color: var(--accent2-color);
-  border: 1px solid #DDD;
-  border-radius: 8px;
-  padding: 1em;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background: #fff;
+  border: 1px solid #AABD8C; /* Sage accent */
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.involve-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .involve-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 1em;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+  cursor: pointer;
 }
 
-/* ----- Form Styles ----- */
+.involve-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  filter: brightness(1.05);
+}
+
+/* Sign-Up Form */
 .signup-form {
-  max-width: 600px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  padding: 1em;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
 .signup-form input,
 .signup-form textarea {
-  padding: 0.75em;
-  border: 1px solid #CCC;
-  border-radius: 4px;
-  font-size: 1em;
+  padding: 1rem;
+  border: 1px solid #AABD8C;
+  border-radius: 6px;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
 }
 
-.signup-form button {
-  background-color: transparent;
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+.signup-form input:focus,
+.signup-form textarea:focus {
+  outline: none;
+  border-color: #396E94;
+  box-shadow: 0 0 6px rgba(57,110,148,0.4);
+}
+
+.explore-button {
+  background: #E7C24F;
+  color: #381D2A;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  padding: 0.8em 1.8em;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: 'Lora', serif;
 }
 
-.signup-form button:hover {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
+.explore-button:hover {
+  background: #A43312;
+  color: #FCFBFB;
+  transform: translateY(-2px);
 }
 
-/* ----- Contact and Social Sections ----- */
+/* Contact & Social */
 .contact-social {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 2em 1em;
-  background-color: var(--accent4-color);
-  border-top: 1px solid #DDD;
-  border-radius: 10px;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 0 2rem;
 }
 
 .contact-box,
 .social-box {
-  flex: 1 1 300px;
-  margin: 1em;
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  border: 1px solid #AABD8C;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
 
 .contact-box h3,
 .social-box h3 {
-  color: var(--accent1-color);
-  margin-bottom: 0.5em;
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.8rem;
+  color: #396E94;
+  margin-bottom: 1rem;
 }
 
-/* ----- Footer ----- */
+/* Footer (same as Home) */
 footer {
+  background: #396E94;
+  color: #FCFBFB;
   text-align: center;
-  padding: 1em;
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
-  font-size: 0.9em;
-  border-radius: 10px;
-  margin-top: 2em;
+  padding: 3rem;
+  font-size: 1.3rem;
+  font-family: 'Lora', serif;
+  border-top: 4px solid #A43312;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
 }
 
-/* ----- Responsive Adjustments ----- */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-  }
-
-  nav a {
-    margin: 0.5em 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .contact-social {
-    flex-direction: column;
-    align-items: center;
-  }
+footer p {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
+
+
+
+
+
+

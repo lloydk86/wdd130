@@ -1,3 +1,5 @@
+
+
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora&display=swap');
 
@@ -21,7 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 3rem;
-  background: #396E94; /* Deep Blue */
+  background: #fff; /* Deep Blue */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -41,7 +43,7 @@ body {
 .nav-links a {
   margin-left: 2.5rem;
   text-decoration: none;
-  color: #FCFBFB;
+  color: #A43312;
   font-weight: 600;
   font-family: 'Lora', serif;
   font-size: 1.3rem;
@@ -208,9 +210,9 @@ body {
 footer {
   background: #396E94;
   color: #FCFBFB;
-  text-align: center;
+  text-align: left;
   padding: 3rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: 'Lora', serif;
   border-top: 4px solid #A43312;
   box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
@@ -222,6 +224,45 @@ footer p {
   letter-spacing: 0.5px;
 }
 
+
+
+
+footer {
+  background:#396E94;
+  color: #FCFBFB;
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  border-top: 4px solid #A43312;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
+
+  display: flex;              /* enable flexbox */
+  justify-content: space-between; /* space between text and icons */
+  align-items: center;        /* vertical alignment */
+}
+
+footer p {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: left;           /* keep text aligned left */
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img {
+  width: 28px;
+  height: 28px;
+  /* icons keep their normal colors */
+}
+
+.footer-social a:hover {
+  transform: scale(1.2);
+}
 
 
 

@@ -59,9 +59,8 @@ body {
 .hero {
   text-align: center;
   padding: 6rem 2rem;
-  background: linear-gradient(to right, rgba(57,110,148,0.85), rgba(168,189,140,0.85)), 
-              url('images/community_preservation.jpeg') center/cover no-repeat;
-  color: #FCFBFB;
+  background: #A43312;
+  color: #FFFFFF;
 }
 
 .hero h1 {
@@ -229,7 +228,7 @@ footer p {
 
 footer {
   background:#396E94;
-  color: #FCFBFB;
+  color:#FFFFFF;
   padding: 2rem 3rem;
   font-size: 1.2rem;
   font-family: 'Lora', serif;
@@ -263,8 +262,6 @@ footer p {
 .footer-social a:hover {
   transform: scale(1.2);
 }
-
-
 
 
 
